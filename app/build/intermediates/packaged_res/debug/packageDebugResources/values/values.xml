@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="cream">#FFF8E7</color>
+    <color name="earth_brown">#8D6E63</color>
+    <color name="warm_orange">#F4A261</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">Bebe Di Rasoi</string>
+    <style name="Theme.BebeDiRasoi" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor" ns1:targetApi="l">@android:color/transparent</item>
+    </style>
+</resources>

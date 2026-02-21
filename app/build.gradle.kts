@@ -3,7 +3,20 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.dagger.hilt.android")
     id("com.google.devtools.ksp")
-    id("com.google.gms.google-services")
+}
+
+val googleServicesConfigLocations = listOf(
+    "google-services.json",
+    "src/debug/google-services.json",
+    "src/release/google-services.json"
+)
+
+if (googleServicesConfigLocations.any { file(it).exists() }) {
+    apply(plugin = "com.google.gms.google-services")
+} else {
+    logger.lifecycle(
+        "google-services.json not found in app module. Skipping Google Services plugin for local builds."
+    )
 }
 
 android {
@@ -58,6 +71,7 @@ dependencies {
     androidTestImplementation(composeBom)
 
     implementation("androidx.core:core-ktx:1.13.1")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
     implementation("androidx.activity:activity-compose:1.9.2")

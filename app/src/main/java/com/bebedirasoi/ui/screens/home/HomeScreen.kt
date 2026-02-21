@@ -19,7 +19,11 @@ import com.bebedirasoi.ui.viewmodel.CartViewModel
 import com.bebedirasoi.ui.viewmodel.HomeViewModel
 
 @Composable
-fun HomeScreen(cartViewModel: CartViewModel, onNavigate: (String) -> Unit, vm: HomeViewModel = hiltViewModel()) {
+fun HomeScreen(
+    cartViewModel: CartViewModel,
+    vm: HomeViewModel = hiltViewModel(),
+    onNavigate: (String) -> Unit
+) {
     val meals = vm.state.value.meals.ifEmpty {
         listOf(
             Meal(id = "1", title = "Punjabi Thali", description = "Dal, sabzi, roti, chawal", price = 99.0, calories = 750, rating = 4.8),
