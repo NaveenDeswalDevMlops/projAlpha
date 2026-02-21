@@ -1,0 +1,5 @@
+# Local Gradle working directories
+.gradle/
+
+# Wrapper binary is intentionally not committed in this environment
+gradle/wrapper/gradle-wrapper.jar

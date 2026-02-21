@@ -1,0 +1,20 @@
+{
+  "users": [
+    {"id": "user_1", "name": "Riya Sharma", "email": "riya@example.com", "role": "customer", "phone": "9876543210", "addresses": ["Hostel Block A, Room 207"]},
+    {"id": "admin_1", "name": "Kitchen Admin", "email": "admin@bebedirasoi.com", "role": "admin", "phone": "9998887776", "addresses": ["Central Kitchen, Sector 21"]}
+  ],
+  "categories": [
+    {"id": "cat_1", "name": "Today's Thali"},
+    {"id": "cat_2", "name": "Recommended"}
+  ],
+  "meals": [
+    {"id": "meal_1", "title": "Punjabi Thali", "description": "Dal Makhani, Aloo Sabzi, 4 Rotis, Rice, Salad", "price": 99, "calories": 760, "rating": 4.8, "categoryId": "cat_1", "isAvailable": true},
+    {"id": "meal_2", "title": "Rajma Chawal", "description": "Slow-cooked rajma with steamed rice", "price": 79, "calories": 650, "rating": 4.7, "categoryId": "cat_2", "isAvailable": true}
+  ],
+  "orders": [
+    {"id": "order_1", "userId": "user_1", "status": "Preparing", "deliverySlot": "12:30 PM - 1:30 PM", "totalAmount": 99}
+  ],
+  "reviews": [
+    {"id": "review_1", "mealId": "meal_1", "userId": "user_1", "rating": 5, "comment": "Exactly like home food"}
+  ]
+}
